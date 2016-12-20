@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+  <link href="css/style-metronic.css" rel="stylesheet" type="text/css"/>
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="css/style-responsive.css" rel="stylesheet" type="text/css"/>
+  <link href="css/plugins.css" rel="stylesheet" type="text/css"/>
+  <link href="css/pages/login.css" rel="stylesheet" type="text/css"/>
+
+  <title>Login Page Test</title>
+</head>
+<body class="login">
+<div class="logo"></div>
+<div class="content">
+  <!-- BEGIN LOGIN FORM -->
+  <form class="login-form" action="/login" method="POST">
+    <h3 class="form-title">加密登陆测试</h3>
+    <div class="alert alert-danger display-hide">
+      <button class="close" data-close="alert"></button>
+      <span>请输入用户名和密码！</span>
+    </div>
+    <div class="form-group">
+      <!--ie8 和 ie9 不支持 html5 placeholder 属性，为了兼容我们只好写入js脚本防止冲突-->
+      <div class="input-icon">
+        <i class="fa fa-user"></i>
+        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名"
+               name="username"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-icon">
+        <i class="fa fa-lock"></i>
+        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="密码"
+               name="password"/>
+      </div>
+    </div>
+    <div class="form-actions">
+      <label class="checkbox">
+        <input type="checkbox" name="remember" value="1"/> 记住密码
+      </label>
+      <button type="button" class="btn green pull-right">
+        登陆 <i class="m-icon-swapright m-icon-white"></i>
+      </button>
+    </div>
+    <div class="alert alert-info">
+      <button class="close" data-close="alert"></button>
+      <span>演示用户名: yufan, 密码: 123456</span>
+    </div>
+  </form>
+</div>
+<div id="copyright">
+  2016 &copy; OneAPM
+</div>
+
+<script src="plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="plugins/jquery.cookie.min.js" type="text/javascript"></script>
+<script src="plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+
+<script src="scripts/app.js" type="text/javascript"></script>
+<script src="scripts/placeholder.js" type="text/javascript"></script>
+<script src="scripts/jsencrypt.min.js" type="text/javascript"></script>
+<script src="scripts/login.js" type="text/javascript"></script>
+
+<script>
+  jQuery(document).ready(function () {
+    App.init();
+    Login.init();
+  });
+</script>
+</body>
+</html>
